@@ -1,0 +1,24 @@
+﻿<Window x:Class="HeroCreator.CreateNewHeroWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HeroCreator"
+        mc:Ignorable="d"
+        Title="CreateNewHeroWindow" Height="359" Width="216">
+    <StackPanel>
+        <Label Margin="10,0,10,0" Padding="10" Content="Name" Background="LightBlue"></Label>
+        <TextBox x:Name="name" Margin="10,0,10,0" Padding="10" Text="{Binding newHero.Name}"></TextBox>
+        <Label Margin="10,0,10,0" Padding="10" Content="Speed" Background="LightBlue"></Label>
+        <TextBox x:Name="speed" Margin="10,0,10,0" Padding="10" Text="{Binding newHero.Speed}"></TextBox>
+        <Label Margin="10,0,10,0" Padding="10" Content="Power" Background="LightBlue"></Label>
+        <TextBox x:Name="power" Margin="10,0,10,0" Padding="10" Text="{Binding newHero.Power}"></TextBox>
+        <Label Margin="10,0,10,0" Padding="10" Content="Type" Background="LightBlue"></Label>
+        <ComboBox x:Name="type" ItemsSource="{Binding newHero.Type}" SelectedIndex="0" Margin="10,0,10,0">
+            <ComboBoxItem Content="Good"></ComboBoxItem>
+            <ComboBoxItem Content="Neutral"></ComboBoxItem>
+            <ComboBoxItem Content="Evil"></ComboBoxItem>
+        </ComboBox>
+        <Button Content="Save" Margin="10" Padding="10" Click="Button_Click"></Button>
+    </StackPanel>
+</Window>
